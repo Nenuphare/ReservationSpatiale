@@ -18,6 +18,7 @@ const Layout = () => {
   return (
     <div className='app'>
       <Navbar />
+      <Header />
       <Outlet />
       <FormBooking/>
       <Footer />

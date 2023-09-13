@@ -62,7 +62,7 @@
 }
 
 a {
-    color: rgba(169, 169, 169, 0.5);
+    color: rgba(169, 169, 169, 0.5)!important;
 }
 
 a:hover {
