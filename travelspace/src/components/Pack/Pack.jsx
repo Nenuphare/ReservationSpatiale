@@ -25,7 +25,7 @@ export default function Packs() {
                             Voyage #1
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} component="div">
-                            Programme basique
+                            Programme Pioneer
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
                             125000$
@@ -50,7 +50,7 @@ export default function Packs() {
                             Voyage #2
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} component="div">
-                            Programme avancé 
+                            Programme futur astronaut
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
                             175000$
@@ -76,7 +76,7 @@ export default function Packs() {
                             Voyage #3
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} component="div">
-                           Programme premium
+                           Programme advanced
                         </Typography>
                         <Typography sx={{ mb: 1.5 }} color="text.secondary">
                             200000$
