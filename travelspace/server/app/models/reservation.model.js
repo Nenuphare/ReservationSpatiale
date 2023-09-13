@@ -1,12 +1,16 @@
 module.exports = mongoose => {
     const Reservation = mongoose.model(
       "reservation",
-      mongoose.Schema(
+      mongoose.Schema.methode("toJSON", function() {
+        const {__v,_id,...object} = this.toObject(); 
+        object.id=_id;
+        return object;})
+        (
         {
-          idUser: Number,
-          idDest: Number,
+          _id : String,
+          idUser: String,
+          idDest: String,
           heureDepart: Date,
-          tpsTrajet: String
         },
         { timestamps: true }
       )

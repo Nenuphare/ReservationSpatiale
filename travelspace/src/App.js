@@ -10,6 +10,7 @@ import Page2 from "./components/Footer/mentions";
 import Page3 from "./components/Footer/contact";
 import Login from "./pages/Login/login"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FormBooking from './pages/Form/FormBooking';
 
 
 const Layout = () => {
@@ -18,6 +19,7 @@ const Layout = () => {
       <Navbar />
       <Header/>
       <Pack />
+      <FormBooking/>
       <Footer />
     </div>
   );
