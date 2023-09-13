@@ -27,9 +27,9 @@ app.get("/", (req, res) => {
     });
 });
 // route pour l'échange
-//app.get(require("./app/routes/user.routes.js")(app));
-//app.get(require("./app/routes/destination.routes.js")(app));
-//app.get(require("./app/routes/reservation.routes.js")(app));
+app.get(require("./app/routes/user.routes.js")(app));
+app.get(require("./app/routes/destination.routes.js")(app));
+app.get(require("./app/routes/reservation.routes.js")(app));
 
 
 
