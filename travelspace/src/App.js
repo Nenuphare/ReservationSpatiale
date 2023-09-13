@@ -7,7 +7,7 @@ import Page0 from "./components/Footer/cgu";
 import Page1 from "./components/Footer/cgv";
 import Page2 from "./components/Footer/mentions";
 import Page3 from "./components/Footer/contact";
-import Login from "./pages/Login/login";
+import Login from "./pages/Login/Login";
 import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FormBooking from './pages/Form/FormBooking';
