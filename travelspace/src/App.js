@@ -22,6 +22,7 @@ const Layout = () => {
     </div>
   );
 };
+
 const router = createBrowserRouter([
   {
     path: "/",
