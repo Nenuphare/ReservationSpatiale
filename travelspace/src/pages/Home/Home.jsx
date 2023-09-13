@@ -8,7 +8,6 @@ console.log(toutuser); */
 const Home = () => {
   return (
     <div className='home'>
-        <Header />
         <Packs />
         <Form />
     </div>
