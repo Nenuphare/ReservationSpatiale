@@ -7,9 +7,9 @@ module.exports = app => {
     var router = express.Router();
 
     //Create a new etape
-    router.post("/", user.create);
+    router.post("/user", user.create);
     //Find all etape
-    router.get("/", user.findAll);
+    router.get("/user", user.findAll);
 
-    app.use("/api/user", router);
+    app.use("/api", router);
 }
