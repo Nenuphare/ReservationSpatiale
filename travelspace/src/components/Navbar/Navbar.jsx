@@ -30,7 +30,7 @@ const Navbar = () => {
             <MDBNavbarLink active aria-current='page' href='/'>
               Accueil
             </MDBNavbarLink>
-            <MDBNavbarLink href='./pages/Programmes/'>Nos Programmes</MDBNavbarLink>
+            <MDBNavbarLink href='#packs'>Nos Programmes</MDBNavbarLink>
             <MDBNavbarLink href='./pages/Login/login'>Réservez ici</MDBNavbarLink>
           </MDBNavbarNav>
         </MDBCollapse>

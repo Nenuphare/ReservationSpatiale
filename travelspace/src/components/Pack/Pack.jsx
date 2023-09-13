@@ -16,10 +16,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Packs() {
   return (
-    <Grid container spacing={0} id='packs'>
+    <Grid container spacing={0} id='packs' sx={{ mt: 10 }}>
         <Grid xs display="flex" justifyContent="center" alignItems="center">
             <Item>
-                <Card sx={{ maxWidth: 450,  }}>
+                <Card sx={{ maxWidth: 450 }}>
                     <CardContent>
                         <Typography variant="h5" color="text.primary" gutterBottom>
                             Voyage #1
