@@ -11,20 +11,14 @@ import Page3 from "./components/Footer/contact";
 import Login from "./pages/Login/Login";
 import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FormBooking from './pages/Form/FormBooking';
+
 
 
 const Layout = () => {
   return (
     <div className='app'>
       <Navbar />
-<<<<<<< HEAD
-      <Header/>
-      <Pack />
-      <FormBooking/>
-=======
       <Outlet />
->>>>>>> e49d44fb248c91a741cd0e15a702b7aa4dd4b0c6
       <Footer />
     </div>
   );

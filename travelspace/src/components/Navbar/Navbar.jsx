@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Travel Space</MDBNavbarBrand>
+        <MDBNavbarBrand href='/'>Travel Space</MDBNavbarBrand>
         <MDBNavbarToggler
           aria-expanded='false'
           aria-label='Toggle navigation'
@@ -27,7 +27,7 @@ const Navbar = () => {
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNavSecond}>
           <MDBNavbarNav>
-            <MDBNavbarLink active aria-current='page' href='#'>
+            <MDBNavbarLink active aria-current='page' href='/'>
               Accueil
             </MDBNavbarLink>
             <MDBNavbarLink href='./pages/Programmes/'>Nos Programmes</MDBNavbarLink>
