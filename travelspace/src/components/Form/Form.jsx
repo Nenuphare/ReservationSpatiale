@@ -30,11 +30,11 @@ const Form= () => {
        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>       
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Prenom" variant="standard" name="user_name"/>
+                    <TextField id="input-with-sx" label="Prenom" variant="standard" name="from_name"/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="e-mail" variant="standard" name="user_email"/>
+                    <TextField id="input-with-sx" label="e-mail" variant="standard" name="from_email"/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
