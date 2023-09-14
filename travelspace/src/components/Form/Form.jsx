@@ -51,13 +51,7 @@ const Form= () => {
                             <Grid xs display="flex" justifyContent="center" alignItems="center" name sx={{ mt: 4 }} >
                                 <Button size="large" type="submit" class="btn btn-outline-primary py-2 px-3 me-3" onClick={refreshPage}>
                                   Envoyer
-                                  <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                      <i class="fa fa-arrow-right"></i>
-                                  </div>
-                                  </Button>
-                                  <p class="please-wait"></p>
-                                  <p class="error"></p>
-                                  <p class="success"></p>
+                                </Button>
                             </Grid >
                         </form>              
         </div>
