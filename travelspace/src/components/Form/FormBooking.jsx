@@ -57,19 +57,19 @@ const FormBooking = () => {
        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>      
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Prenom" variant="standard"  name="firstname"/>
+                    <TextField id="input-with-sx" label="Prenom" variant="standard"  name="firstname" value={formDataReservation.prenom} onChange={handleChange}/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Nom" variant="standard" name="name" />
+                    <TextField id="input-with-sx" label="Nom" variant="standard" name="name" value={formDataReservation.nom} onChange={handleChange}/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="e-mail" variant="standard" name="=email"/>
+                    <TextField id="input-with-sx" label="e-mail" variant="standard" name="=email" value={formDataReservation.email} onChange={handleChange}/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <LocalPhoneIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="téléphone" variant="standard" name="telephone"/>
+                    <TextField id="input-with-sx" label="téléphone" variant="standard" name="telephone" value={formDataReservation.telephone} onChange={handleChange}/>
                 </Box>
         </Grid>
 
@@ -161,6 +161,8 @@ const FormBooking = () => {
         </InputLabel>
         <NativeSelect
           defaultValue={1}
+          value={formDataReservation.nomDest} 
+          onChange={handleChange}
           inputProps={{
             
             name: 'programme',
@@ -180,6 +182,8 @@ const FormBooking = () => {
         </InputLabel>
         <NativeSelect
           defaultValue={1}
+          value={formDataReservation.dateDepart} 
+          onChange={handleChange}
           inputProps={{
             name: 'date',
             id: 'date',
