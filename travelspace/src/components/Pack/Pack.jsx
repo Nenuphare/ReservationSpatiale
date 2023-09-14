@@ -21,7 +21,7 @@ export default function Packs() {
   return (
     <div id='packs'>
         <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Nos programmes</Typography>
-        <Grid container spacing={0} sx={{ mt: 10, mr: 10 }}>
+        <Grid container spacing={0} sx={{ mt: 10, mr: 2 }}>
             <VizSensor onChange={(isVisible) => {
                     setActive(isVisible);
                 }}
