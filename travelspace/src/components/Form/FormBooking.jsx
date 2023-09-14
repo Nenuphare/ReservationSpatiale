@@ -49,6 +49,7 @@ const FormBooking = () => {
     // Access the form data in the formData object
     console.log(formDataReservation );
     // You can now send this data to an API or perform any desired action
+    Reservation.create(formDataReservation);
   };
   return (
     <div id='reserver'>
