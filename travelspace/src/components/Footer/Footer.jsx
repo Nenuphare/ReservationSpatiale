@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 const Footer = () => {
@@ -21,10 +21,10 @@ const Footer = () => {
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Aide & Informations</h5>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Form/Form">Contactez-nous</Link></a>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/mentions">Mentions Légales</Link></a>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgu">Conditions générales d'utilisation</Link></a>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgv">Conditions générales de vente</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Form/Form#reserver">Contactez-nous</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/mentions#">Mentions Légales</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgu#">Conditions générales d'utilisation</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgv#">Conditions générales de vente</Link></a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Un Avis Google ?</h5>

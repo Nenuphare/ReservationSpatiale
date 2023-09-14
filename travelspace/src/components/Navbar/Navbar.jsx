@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [showNavSecond, setShowNavSecond] = useState(false);
@@ -29,11 +29,11 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
                         <a href="/" class="nav-item nav-link" active id="active">Accueil</a>
-                        <div class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Pack/Pack">Nos programmes</Link></div>
+                        <div class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Pack/Pack#packs">Nos programmes</Link></div>
                         <div class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Form/Form#reserver" relative='#reserver'>Contactez-nous</Link></div>
                     </div>
                     <div class="d-none d-lg-flex ms-2">
-                        <div class="btn btn-outline-primary py-2 px-3"><Link className ="link" to="/components/Form/FormBooking">
+                        <div class="btn btn-outline-primary py-2 px-3"><Link className ="link" to="/components/Form/FormBooking#reserver">
                             Réservez ici !</Link>
                             <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                 <i class="fa fa-arrow-right"></i>
