@@ -6,6 +6,9 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Grid, Typography } from '@mui/material';
 import MailIcon from '@mui/icons-material/Mail';
 
+function refreshPage() {
+  window.location.reload(false);
+}
 
 const Form= () => {
 
@@ -42,7 +45,7 @@ const Form= () => {
                 </Box>
         </Grid>
             <Grid xs display="flex" justifyContent="center" alignItems="center" name sx={{ mt: 4 }} >
-                <Button size="large" type="submit">Envoyer</Button>
+                <Button size="large" type="submit" onClick={refreshPage}>Envoyer</Button>
             </Grid >
     </form>
     </div>
