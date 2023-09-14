@@ -1,68 +1,53 @@
-import React from 'react';
+import React, { useRef } from "react";
+import { TextField } from '@mui/material';
+import emailjs from "@emailjs/browser";
 import Box from '@mui/material/Box';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Grid, Typography } from '@mui/material';
 import MailIcon from '@mui/icons-material/Mail';
+import SendIcon from '@mui/icons-material/Send';
 
-const travel = [
-    {
-      value: '1',
-      label: 'Pioneer',
-    },
-    {
-      value: '2',
-      label: 'Future astronaut',
-    },
-    {
-      value: '3',
-      label: 'Advanced',
-    },
-  ];
 
-const Form = () => {
+const Form= () => {
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_exytl5f", "template_00wfi8v", form.current, "WvurAH1-7YV2jFXYI").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
   return (
     <div id='reserver'>
-        <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Réserver</Typography>
-            <Grid xs display="flex" justifyContent="center" alignItems="center">       
+        <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Nous contacter</Typography>
+       <form ref={form} onSubmit={sendEmail}>
+       <Grid xs display="flex" justifyContent="center" alignItems="center">       
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Prenom" variant="standard" />
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3 }}>
-                    <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Nom" variant="standard" />
+                    <TextField id="input-with-sx" label="Prenom" variant="standard" name="user_name"/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="e-mail" variant="standard" />
+                    <TextField id="input-with-sx" label="e-mail" variant="standard" name="user_email"/>
                 </Box>
-                <TextField sx={{ mt: 7, ml: 3}}
-                id="outlined-select-currency-native"
-                select
-                label="Programmes"
-                defaultValue="1"
-                SelectProps={{
-                    native: true,
-                }}
-                helperText="Choisissez votre programme"
-                >
-                {travel.map((option) => (
-                    <option key={option.value} value={option.value}>
-                    {option.label}
-                    </option>
-                ))}
-                </TextField>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
+                    <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
+                    <TextField id="input-with-sx" label="message" variant="standard" name="message"/>
+                </Box>
             </Grid>
-            <Grid xs display="flex" justifyContent="center" alignItems="center">
-                <Button size="large">Envoyer</Button>
+            <Grid xs display="flex" justifyContent="center" alignItems="center" name>
+                <Button size="large" type="submit">Envoyer</Button>
             </Grid >
+    </form>
     </div>
-  )
+  );
 }
 
-export default Form
+
+export default Form;
