@@ -12,6 +12,7 @@ const Header = () => {
                                 <div class="row justify-content-center">
                                     <div class="col-lg-7 pt-5">
                                         <h1 class="display-4 text-white mb-3 animated slideInDown">Réservez votre voyage dans l'univers spatio-temporelle</h1>
+                                        <br></br><br></br>
                                         <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#packs">
                                             En savoir plus
                                             <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -30,6 +31,7 @@ const Header = () => {
                                 <div class="row justify-content-center">
                                     <div class="col-lg-7 pt-5">
                                         <h1 class="display-4 text-white mb-3 animated slideInDown">Réservez votre voyage dans l'univers spatio-temporelle</h1>
+                                        <br></br>
                                         <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#packs">
                                             En savoir plus
                                             <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">

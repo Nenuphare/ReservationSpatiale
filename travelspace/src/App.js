@@ -6,8 +6,8 @@ import Pack from "./components/Pack/Pack";
 import Page0 from "./components/Footer/cgu";
 import Page1 from "./components/Footer/cgv";
 import Page2 from "./components/Footer/mentions";
-import Page3 from "./components/Footer/contact";
 import Login from "./pages/Login/Login";
+import Form from "./components/Form/Form";
 import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FormBooking from './pages/Form/FormBooking';
@@ -55,8 +55,13 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/components/Footer/contact",
-    element: <Page3 />,
+    path: "/components/Form/Form",
+    element: <Form />,
+  },
+
+  {
+    path: "/components/Pack/Pack",
+    element: <Pack />,
   },
 ] 
  },

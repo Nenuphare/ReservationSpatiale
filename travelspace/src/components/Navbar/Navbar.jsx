@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [showNavSecond, setShowNavSecond] = useState(false);
@@ -28,8 +29,8 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
                         <a href="/" class="nav-item nav-link" active id="active">Accueil</a>
-                        <a href="#packs" class="nav-item nav-link active" active id="lol">Nos programmes</a>
-                        <a href="#reserver" class="nav-item nav-link active" active id="lol">Contactez-nous</a>
+                        <a class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Pack/Pack">Nos programmes</Link></a>
+                        <a class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Form/Form">Contactez-nous</Link></a>
                     </div>
                     <div class="d-none d-lg-flex ms-2">
                         <a class="btn btn-outline-primary py-2 px-3" href="./pages/Login/Login">

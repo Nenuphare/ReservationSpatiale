@@ -20,7 +20,7 @@ const Footer = () => {
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Aide & Informations</h5>
-                    <a class="btn btn-link"><Link className ="link" to="/pages/Login/Login">Connectez-vous</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Form/Form">Contactez-nous</Link></a>
                     <a class="btn btn-link"><Link className ="link" to="/components/Footer/mentions">Mentions Légales</Link></a>
                     <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgu">Conditions générales d'utilisation</Link></a>
                     <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgv">Conditions générales de vente</Link></a>
