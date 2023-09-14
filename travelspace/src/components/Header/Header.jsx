@@ -12,8 +12,7 @@ const Header = () => {
                                 <div class="row justify-content-center">
                                     <div class="col-lg-7 pt-5">
                                         <h1 class="display-4 text-white mb-3 animated slideInDown">Réservez votre voyage dans l'univers spatio-temporelle</h1>
-                                        <p class="fs-5 text-white-50 mb-5 animated slideInDown">Une préparation de 31 jours incluse !</p>
-                                        <a class="btn btn-primary py-2 px-3 animated slideInDown" href="404.html">
+                                        <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#packs">
                                             En savoir plus
                                             <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                                 <i class="fa fa-arrow-right"></i>
@@ -31,8 +30,7 @@ const Header = () => {
                                 <div class="row justify-content-center">
                                     <div class="col-lg-7 pt-5">
                                         <h1 class="display-4 text-white mb-3 animated slideInDown">Réservez votre voyage dans l'univers spatio-temporelle</h1>
-                                        <p class="fs-5 text-white-50 mb-5 animated slideInDown">Une préparation de 31 jours incluse !</p>
-                                        <a class="btn btn-primary py-2 px-3 animated slideInDown" href="atelier.html">
+                                        <a class="btn btn-primary py-2 px-3 animated slideInDown" href="#packs">
                                             En savoir plus
                                             <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                                                 <i class="fa fa-arrow-right"></i>
