@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 const Footer = () => {
@@ -9,22 +9,22 @@ const Footer = () => {
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h1 class="id='titre' fw-bold text-primary mb-4">Travel Space<span class="id='titre1' text-white"></span></h1>
+                    <h1 class="id='titre' fw-bold text-primary mb-4">Travel <span class="id='titre1' text-white">Space</span></h1>
                     <p>Le voyage spatio-temporelle !</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Nous Contacter</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i><a href="https://goo.gl/maps/VHYBH4TBntHqvMyB6" target="_blank">40 Rue du Chemin Vert, 75011 Paris</a></p>
                     <p><i class="fa fa-phone-alt me-3"></i><a href="tel:+33155070765" target="_blank">(+33) 1 55 07 07 65</a></p>
-                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:contact@travelspace.fr" target="_blank">contact@travelspace.fr</a></p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:travelspace.contact@gmail.com" target="_blank">travelspace.contact@gmail.com</a></p>
                     <p><i class="fa fa-regular fa-clock me-3"></i>Lundi au Vendredi : 08h30-19h00</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Aide & Informations</h5>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Form/Form">Contactez-nous</Link></a>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/mentions">Mentions Légales</Link></a>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgu">Conditions générales d'utilisation</Link></a>
-                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgv">Conditions générales de vente</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Form/Form#reserver">Contactez-nous</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/mentions#">Mentions Légales</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgu#">Conditions générales d'utilisation</Link></a>
+                    <a class="btn btn-link"><Link className ="link" to="/components/Footer/cgv#">Conditions générales de vente</Link></a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Un Avis Google ?</h5>
