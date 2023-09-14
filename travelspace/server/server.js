@@ -8,7 +8,7 @@ const url = require("./app/config/db.config.js");
 
 
 const corsOptions = {
-    origin: "http://localhost:8081", // DEV
+    origin: "http://localhost:3000", // DEV
     optionSuccessStatus: 200,
 };
 
@@ -17,8 +17,6 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
 
 //simple route
 app.get("/", (req, res) => {

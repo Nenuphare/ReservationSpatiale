@@ -2,7 +2,7 @@ import http from "../http-commons";
 
 class UserService {
     getAll(){
-        return http.get("/user");
+        return http.get("");
     }
 
     create (data){
