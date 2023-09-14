@@ -27,10 +27,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const FormBooking = () => {
   const [formDataReservation, setFormDataReservation] = useState({
-    prenom: '',
-    nom: '',
-    nomDest: '',
-    dateDepart: '',
+    firstname: '',
+    name: '',
+    programme: '',
+    date: '',
     email: '',
     telephone: '',
   });
@@ -56,21 +56,24 @@ const FormBooking = () => {
       <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Réserver</Typography>
        <form onSubmit={handleSubmit}>
        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>      
-                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} value={formDataReservation.prenom} onChange={handleChange}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} onChange={handleChange}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Prenom" variant="standard" />
+                    <TextField id="input-with-sx" label="Prenom" variant="standard"  value={formDataReservation.firstname} name="firstname" />
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} value={formDataReservation.nom} onChange={handleChange}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} onChange={handleChange}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Nom" variant="standard" />
+
+                    <TextField id="input-with-sx" label="Nom" variant="standard" value={formDataReservation.name} name="name" />
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}value={formDataReservation.email} onChange={handleChange}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}  onChange={handleChange}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="e-mail" variant="standard" />
+                    <TextField id="input-with-sx" label="e-mail" variant="standard" value={formDataReservation.email} name="email" />
+
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}value={formDataReservation.telephone} onChange={handleChange}>
+                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} onChange={handleChange}>
                     <LocalPhoneIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="téléphone" variant="standard"/>
+
+                    <TextField id="input-with-sx" label="téléphone" variant="standard" value={formDataReservation.telephone} name="telephone" />
                 </Box>
         </Grid>
 
@@ -155,18 +158,19 @@ const FormBooking = () => {
             </Grid>
     </Grid>
     </div>
-    <Box xs display="flex" justifyContent="center" sx={{ maxWidth: 170, mt: 5, ml: 88 }} value={formDataReservation.nomDest} onChange={handleChange}>
+    <Box xs display="flex" justifyContent="center" sx={{ maxWidth: 170, mt: 5, ml: 88 }} onChange={handleChange}>
       <FormControl>
         <InputLabel variant="standard" htmlFor="uncontrolled-native">
           Programme
         </InputLabel>
         <NativeSelect
           defaultValue={1}         
-/*           inputProps={{
-            
+
+          inputProps={{            
             name: 'programme',
             id: 'program',
-          }} */
+          }}
+          value={formDataReservation.programme}
         >
           <option value={1}>Pioneer</option>
           <option value={2}>futur astronaut</option>
@@ -174,17 +178,19 @@ const FormBooking = () => {
         </NativeSelect>
       </FormControl>
     </Box>
-    <Box xs display="flex" justifyContent="center" sx={{ maxWidth: 170, mt: 5, ml: 88 }} value={formDataReservation.dateDepart} onChange={handleChange}>
+    <Box xs display="flex" justifyContent="center" sx={{ maxWidth: 170, mt: 5, ml: 88 }} onChange={handleChange}>
       <FormControl>
         <InputLabel variant="standard" htmlFor="uncontrolled-native">
           Date de départ
         </InputLabel>
         <NativeSelect
           defaultValue={1}
-/*           inputProps={{
+          inputProps={{
             name: 'date',
             id: 'date',
-          }} */
+
+          }}
+          value={formDataReservation.date}
         >
           <option value={1}>12 janvier 2024</option>
           <option value={2}>15 avril 2024</option>

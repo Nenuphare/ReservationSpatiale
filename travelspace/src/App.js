@@ -9,12 +9,14 @@ import Page2 from "./components/Footer/mentions";
 import Form from "./components/Form/Form";
 import Home from './components/Home/Home';
 import FormBooking from './components/Form/FormBooking';
+import Cookies from "./components/Cookies/Cookie";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Layout = () => {
   return (
     <div className='app'>
+      <Cookies />
       <Navbar />
       <Header />
       <Outlet />
