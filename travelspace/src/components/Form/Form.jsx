@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Grid, Typography } from '@mui/material';
 import MailIcon from '@mui/icons-material/Mail';
-import SendIcon from '@mui/icons-material/Send';
 
 
 const Form= () => {
@@ -23,6 +22,7 @@ const Form= () => {
       }
     );
   };
+  
   return (
     <div id='reserver'>
         <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Nous contacter</Typography>
