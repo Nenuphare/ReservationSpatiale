@@ -32,11 +32,13 @@ const FormBooking = () => {
     nomDest: '',
     dateDepart: '',
     email: '',
-    telephone: ''
-  })
+    telephone: '',
+  });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormDataReservation({
+      
       ...formDataReservation,
       [name]: value,
     });
@@ -45,7 +47,7 @@ const FormBooking = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Access the form data in the formData object
-    console.log(formDataUser,formDataDestination, formDataReservation );
+    console.log(formDataReservation );
     // You can now send this data to an API or perform any desired action
   };
   return (
