@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/reservation.model.js");
 //const {useRoute} = require("vue-router");
 const Reservation = db.reservation;
 const bodyParser = require("body-parser");
@@ -8,7 +8,12 @@ exports.create = (req, res) => {
 
     //Création de l'article
    const reservation = new Reservation({
-        code: req?.body?.code
+        nom: req?.body?.nom,
+        prenom: req?.body?.prenom,
+        email: req?.body?.email,
+        telephone: req?.body?.telephone,
+        programme: req?.body?.programme,
+        date: req?.body?.date
     })
 
     //Sauvegarde de l'article dans la base
@@ -26,10 +31,10 @@ exports.create = (req, res) => {
 
 // Accès à toutes les detinations dans la base
 exports.findAll = (req, res) => {
-    const code = req.query.code;
-    let condition = code ? {
+    const Nom = req.query.nom;
+    let condition = Nom ? {
         nom: {
-            $regex: new RegExp(code),
+            $regex: new RegExp(Nom),
             $options: "i"
         }
     } : {};

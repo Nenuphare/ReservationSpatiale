@@ -54,23 +54,23 @@ const FormBooking = () => {
   return (
     <div id='reserver'>
       <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Réserver</Typography>
-       <form>
+       <form onSubmit={handleSubmit}>
        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>      
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} value={formDataReservation.prenom} onChange={handleChange}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Prenom" variant="standard"  name="firstname" />
+                    <TextField id="input-with-sx" label="Prenom" variant="standard" />
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} value={formDataReservation.nom} onChange={handleChange}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Nom" variant="standard" name="name" />
+                    <TextField id="input-with-sx" label="Nom" variant="standard" />
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}value={formDataReservation.email} onChange={handleChange}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="e-mail" variant="standard" name="=email" />
+                    <TextField id="input-with-sx" label="e-mail" variant="standard" />
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}value={formDataReservation.telephone} onChange={handleChange}>
                     <LocalPhoneIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-                    <TextField id="input-with-sx" label="téléphone" variant="standard" name="telephone" />
+                    <TextField id="input-with-sx" label="téléphone" variant="standard"/>
                 </Box>
         </Grid>
 
@@ -162,11 +162,11 @@ const FormBooking = () => {
         </InputLabel>
         <NativeSelect
           defaultValue={1}         
-          inputProps={{
+/*           inputProps={{
             
             name: 'programme',
             id: 'program',
-          }}
+          }} */
         >
           <option value={1}>Pioneer</option>
           <option value={2}>futur astronaut</option>
@@ -181,10 +181,10 @@ const FormBooking = () => {
         </InputLabel>
         <NativeSelect
           defaultValue={1}
-          inputProps={{
+/*           inputProps={{
             name: 'date',
             id: 'date',
-          }}
+          }} */
         >
           <option value={1}>12 janvier 2024</option>
           <option value={2}>15 avril 2024</option>
@@ -193,7 +193,7 @@ const FormBooking = () => {
       </FormControl>
     </Box>
 
-        <Grid xs display="flex" justifyContent="center" alignItems="center" name sx={{ mt: 4 }} >
+        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 4 }} >
             <Button size="large" type="submit">Envoyer</Button>
         </Grid >
     </form>    
