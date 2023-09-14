@@ -52,16 +52,18 @@
 }
 
 .btn.btn-outline-primary:hover {
-    color: #000000!important;
-    background: #FFFFFF;
-    border-color: #000000; 
+    color: rgb(49, 112, 230)!important;
+    background: transparent;
+    border-color: rgb(49, 112, 230); 
 }
 
 .btn.btn-primary:hover {
-    color: #000000!important;
+    color: #FFFFFF!important;
     background: #FFFFFF;
-    border-color: #000000; 
+    background: transparent;
+    border-color: rgb(49, 112, 230); 
 }
+
 
 a {
     color: #FFFFFF80!important;
@@ -167,6 +169,14 @@ a:hover {
         transition: .5s;
         opacity: 1;
     }
+}
+
+#abc {
+    color:#FFFFFF80;
+}
+
+#ab {
+    background-color:#F8F8F9;
 }
 
 
@@ -328,213 +338,12 @@ a:hover {
 }
 
 
-/*** Causes ***/
-.causes-item .progress {
-    height: 5px;
-    border-radius: 0;
-    overflow: visible;
-}
-
-.causes-item .progress .progress-bar {
-    position: relative;
-    overflow: visible;
-    width: 0px;
-    border-radius: 0;
-    transition: 5s;
-}
-
-.causes-item .progress .progress-bar span {
-    position: absolute;
-    top: -7px;
-    right: 0;
-    width: 40px;
-    height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    background: var(--primary);
-    color: #FFFFFF;
-}
-
-.causes-item .causes-overlay {
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, .5);
-    overflow: hidden;
-    opacity: 0;
-    transition: .5s;
-}
-
-.causes-item:hover .causes-overlay {
-    height: 100%;
-    opacity: 1;
-}
-
 
 /*** Service ***/
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .06);
 }
 
-
-/*** Donate ***/
-.donate {
-    background: rgba(0, 11, 35, 0.8);
-}
-
-.btn-group .btn-light:hover,
-.btn-group input[type="radio"]:checked+label {
-    color: var(--primary);
-    border-color: var(--primary);
-}
-
-
-/*** Team ***/
-.team-item img {
-    position: relative;
-    top: 0;
-    transition: .5s;
-}
-
-.team-item:hover img {
-    top: -30px;
-}
-
-.team-item .team-text {
-    position: relative;
-    height: 100px;
-    transition: .5s;
-}
-
-.team-item:hover .team-text {
-    margin-top: -60px;
-    height: 160px;
-}
-
-.team-item .team-text .team-social {
-    opacity: 0;
-    transition: .5s;
-}
-
-.team-item:hover .team-text .team-social {
-    opacity: 1;
-}
-
-.team-item .team-social .btn {
-    display: inline-flex;
-    color: var(--primary);
-    background: #FFFFFF;
-    border-radius: 40px;
-}
-
-.team-item .team-social .btn:hover {
-    color: #FFFFFF!important;
-    background: var(--primary);
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.testimonial-carousel::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-}
-
-.testimonial-carousel .owl-item .testimonial-text {
-    background: var(--light);
-    transform: scale(.8);
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary);
-    transform: scale(1);
-}
-
-.testimonial-carousel .owl-item .testimonial-text *,
-.testimonial-carousel .owl-item .testimonial-item img {
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text * {
-    color: var(--light) !important;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-item img {
-    background: var(--primary) !important;
-} 
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    width: 350px;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: .5s;
-    z-index: 1;
-}
-
-.testimonial-carousel:hover .owl-nav {
-    width: 300px;
-    opacity: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: relative;
-    color: var(--primary);
-    font-size: 45px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--dark);
-}
-
-.testimonial-text {
-    font-family:Arial, Helvetica, sans-serif;
-}
 
 
 /*** Footer ***/
