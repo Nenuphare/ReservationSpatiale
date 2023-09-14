@@ -26,34 +26,16 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const FormBooking = () => {
-  const [formDataUser, setFormDataUser] = useState({
-    // Initialize form fields and their initial values here
-    prenom: '',
-    nom: '',
-    email: '',
-    telephone: ''
-  });
-  const [formDataDestination, setFormDataDestination] = useState({
-    nomDest: '',
-    dateDepart:''
-  });
   const [formDataReservation, setFormDataReservation] = useState({
     prenom: '',
     nom: '',
     nomDest: '',
-    dateDepart: ''
+    dateDepart: '',
+    email: '',
+    telephone: ''
   })
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormDataUser({
-      ...formDataUser,
-      [name]: value,
-    });
-    setFormDataDestination({
-      ...formDataDestination,
-      [name]: value,
-    });
     setFormDataReservation({
       ...formDataReservation,
       [name]: value,
