@@ -28,7 +28,7 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
                         <a href="/" class="nav-item nav-link" active id="active">Accueil</a>
-                        <a href="#packs" class="nav-item nav-link">Nos programmes</a>
+                        <a href="#packs" class="nav-item nav-link active">Nos programmes</a>
                     </div>
                     <div class="d-none d-lg-flex ms-2">
                         <a class="btn btn-outline-primary py-2 px-3" href="./pages/Login/Login">

@@ -6,7 +6,7 @@ const Header = () => {
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100" src="https://i.ibb.co/GvtsS7f/642558-voyage-fera-bord-navette-lynx.jpg" alt="Image"/>
+                        <img class="w-100" src="https://zupimages.net/up/23/37/9arj.png" alt="Image"/>
                         <div class="carousel-caption">
                             <div class="container">
                                 <div class="row justify-content-center">
@@ -25,7 +25,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100" src="https://zupimages.net/up/23/37/kffp.jpg" alt="Image"/>
+                        <img class="w-100" src="https://zupimages.net/up/23/37/ak04.jpg" alt="Image"/>
                         <div class="carousel-caption">
                             <div class="container">
                                 <div class="row justify-content-center">

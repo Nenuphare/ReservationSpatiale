@@ -52,17 +52,20 @@
 }
 
 .btn.btn-outline-primary:hover {
-    color: var(--primary)!important;
-    background: transparent;
+    color: #000000!important;
+    background: #FFFFFF;
+    border-color: #000000; 
 }
 
 .btn.btn-primary:hover {
-    color: var(--primary)!important;
-    background: transparent;
+    color: #000000!important;
+    background: #FFFFFF;
+    border-color: #000000; 
 }
 
 a {
-    color: rgba(169, 169, 169, 0.5)!important;
+    color: #FFFFFF80!important;
+    text-decoration: none!important;
 }
 
 a:hover {
@@ -127,8 +130,9 @@ a:hover {
 }
 
 .navbar .navbar-nav .nav-link:hover{
-    color: var(--primary);
+    color: var(--light);
 }
+
 
 .navbar .navbar-nav .nav-link.active {
     color: var(--light);
@@ -316,7 +320,7 @@ a:hover {
 }
 
 #active {
-    color: var(--primary);
+    color: var(--primary)!important;
 }
 
 /*** Causes ***/
