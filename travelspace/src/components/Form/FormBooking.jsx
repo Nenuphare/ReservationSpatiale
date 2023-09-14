@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Grid, Typography } from '@mui/material';
@@ -9,12 +9,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import NativeSelect from '@mui/material/NativeSelect';
+import Destination from '../../services/Destination.service.js';
+import User from '../../services/User.service.js';
+import Reservation from '../../services/Reservation.service.js';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#212F3D',
@@ -25,6 +26,46 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const FormBooking = () => {
+  const [formDataUser, setFormDataUser] = useState({
+    // Initialize form fields and their initial values here
+    prenom: '',
+    nom: '',
+    email: '',
+    telephone: ''
+  });
+  const [formDataDestination, setFormDataDestination] = useState({
+    nomDest: '',
+    dateDepart:''
+  });
+  const [formDataReservation, setFormDataReservation] = useState({
+    prenom: '',
+    nom: '',
+    nomDest: '',
+    dateDepart: ''
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormDataUser({
+      ...formDataUser,
+      [name]: value,
+    });
+    setFormDataDestination({
+      ...formDataDestination,
+      [name]: value,
+    });
+    setFormDataReservation({
+      ...formDataReservation,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Access the form data in the formData object
+    console.log(formDataUser,formDataDestination, formDataReservation );
+    // You can now send this data to an API or perform any desired action
+  };
   return (
     <div id='reserver'>
       <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Réserver</Typography>
@@ -32,11 +73,11 @@ const FormBooking = () => {
        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>      
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Prenom" variant="standard" name="firstname"/>
+                    <TextField id="input-with-sx" label="Prenom" variant="standard"  name="firstname"/>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                    <TextField id="input-with-sx" label="Nom" variant="standard" name="name"/>
+                    <TextField id="input-with-sx" label="Nom" variant="standard" name="name" />
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
