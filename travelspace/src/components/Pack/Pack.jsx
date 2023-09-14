@@ -29,7 +29,7 @@ export default function Packs() {
             <Grow in={active} timeout={2000}>
             <Grid xs display="flex" justifyContent="center" alignItems="center">
                 <Item>
-                    <Card sx={{ maxWidth: 450 }}>
+                    <Card sx={{ width: 410, height: 270 }}>
                         <CardContent>
                             <Typography variant="h5" color="text.primary" gutterBottom>
                                 Voyage #1
@@ -58,7 +58,7 @@ export default function Packs() {
             <Grow in={active} timeout={3000}>
             <Grid xs display="flex" justifyContent="center" alignItems="center">
                 <Item>
-                    <Card sx={{ maxWidth: 500,  }}>
+                    <Card sx={{ width: 410, height: 270  }}>
                         <CardContent>
                             <Typography variant="h5" color="text.primary" gutterBottom>
                                 Voyage #2
@@ -88,7 +88,7 @@ export default function Packs() {
             <Grow in={active} timeout={3500}>
             <Grid xs display="flex" justifyContent="center" alignItems="center">
                 <Item>
-                    <Card sx={{ maxWidth: 420,  }}>
+                    <Card sx={{ width: 410, height: 270  }}>
                         <CardContent>
                             <Typography variant="h5" color="text.primary" gutterBottom>
                                 Voyage #3
