@@ -9,14 +9,10 @@ import Form from "./components/Form/Form";
 import Program from "./components/Program/Program";
 import Home from './components/Home/Home';
 import FormBooking from './components/Form/FormBooking';
-import Cookies from "./components/Cookies/Cookie";
-
-
 
 const Layout = () => {
   return (
     <div className='app'>
-      <Cookies />
       <Navbar />
       <Header />
       <Outlet />
@@ -70,10 +66,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <div><RouterProvider router={router} /></div>
   );
+
 }
 
 export default App;
