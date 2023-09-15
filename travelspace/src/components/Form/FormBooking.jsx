@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Grid, Typography } from '@mui/material';
@@ -12,9 +12,9 @@ import Paper from '@mui/material/Paper';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import NativeSelect from '@mui/material/NativeSelect';
+import Destination from '../../services/Destination.service.js';
+import User from '../../services/User.service.js';
 import Reservation from '../../services/Reservation.service.js';
-
-
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,27 +25,8 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-
-  test = Reservation.getAll();
-  var last; 
-  var test;
-  var id;
-  test.then((r) => {
-    last = r.data[r.data.length -1];
-    last = parseInt(last._id);
-    console.log('result', r);
-    id = last +1;
-
-  }) 
-
 const FormBooking = () => {
-
-useEffect(() =>{
- console.log('---------NEXT ID--------------',id);
-},[id]);
-
   const [formDataReservation, setFormDataReservation] = useState({
-    _id: id,
     firstname: '',
     name: '',
     programme: '',
@@ -81,17 +62,14 @@ useEffect(() =>{
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} onChange={handleChange}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-
                     <TextField id="input-with-sx" label="Nom" variant="standard" value={formDataReservation.name} name="name" />
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}  onChange={handleChange}>
                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
                     <TextField id="input-with-sx" label="e-mail" variant="standard" value={formDataReservation.email} name="email" />
-
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} onChange={handleChange}>
                     <LocalPhoneIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
-
                     <TextField id="input-with-sx" label="téléphone" variant="standard" value={formDataReservation.telephone} name="telephone" />
                 </Box>
         </Grid>
@@ -184,7 +162,6 @@ useEffect(() =>{
         </InputLabel>
         <NativeSelect
           defaultValue={1}         
-
           inputProps={{            
             name: 'programme',
             id: 'program',
@@ -207,7 +184,6 @@ useEffect(() =>{
           inputProps={{
             name: 'date',
             id: 'date',
-
           }}
           value={formDataReservation.date}
         >
@@ -218,12 +194,13 @@ useEffect(() =>{
       </FormControl>
     </Box>
 
-        <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 4 }} >
+        <Grid xs display="flex" justifyContent="center" alignItems="center" name sx={{ mt: 4 }} >
             <Button size="large" type="submit">Envoyer</Button>
         </Grid >
     </form>    
     </div>
   )
-        }
+}
+
 
 export default FormBooking
