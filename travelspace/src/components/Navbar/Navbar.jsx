@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto p-4 p-lg-0">
                         <a href="/" class="nav-item nav-link" active id="active">Accueil</a>
-                        <div class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Program/Program">Nos programmes</Link></div>
+                        <div class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Program/Program#ab">Nos programmes</Link></div>
                         <div class="nav-item nav-link active" active id="lol"><Link className ="link" to="/components/Form/Form#reserver">Contactez-nous</Link></div>
                     </div>
                     <div class="d-none d-lg-flex ms-2">
