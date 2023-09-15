@@ -1,0 +1,29 @@
+I - présentation de l'équipe :
+
+Mathis & Diego : frontend & mailer & responsive
+Clément : formulaires, axes à améliorer et épauler Damien sur le back 
+Damien : Backend, BDD avec MongoDB, routes et controllers, récupérer les infos du formulaire
+
+
+
+II - Présentation du thème et du site :
+Page d'accueil
+Nous contacter & preuve de la réception du mail
+Nos programmes redirigeant vers la page de réservation
+Preuve de réception du formulaire de réservation (montrer la BDD)
+Responsive
+
+
+
+III - Axes à améliorer
+
+création d'une page compte/ mon profil.
+création d'un panier afin de faire plusieurs commandes.
+ajout de nouvelles planetes.
+ajout d'autre programmes spaciaux.
+une page par programme.
+ajout d'un systeme de paiement en ligne.
+ajout d'un support/ SAV.
+ajout d'un espace ou les voyageur peuvent donner leur avis.
+envoie d'un mail apres une commande afin de la recapituler/ envoie de la facture.
+
