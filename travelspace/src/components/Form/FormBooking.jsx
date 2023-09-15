@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TextField } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button, Grid, Typography } from '@mui/material';
@@ -12,9 +12,8 @@ import Paper from '@mui/material/Paper';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import NativeSelect from '@mui/material/NativeSelect';
-import Destination from '../../services/Destination.service.js';
-import User from '../../services/User.service.js';
 import Reservation from '../../services/Reservation.service.js';
+
 
 
 
@@ -25,11 +24,29 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-const _id = 0;
+
+
+  test = Reservation.getAll();
+  var last; 
+  var test;
+  var id;
+  test.then((r) => {
+    last = r.data[r.data.length -1];
+    last = parseInt(last._id);
+    console.log('result', r);
+    id = last +1;
+
+  }) 
+
 const FormBooking = () => {
+
+useEffect(() =>{
+ console.log('---------NEXT ID--------------',id);
+},[id]);
+
   const [formDataReservation, setFormDataReservation] = useState({
-    _id: _id + 1,
-  firstname: '',
+    _id: id,
+    firstname: '',
     name: '',
     programme: '',
     date: '',
@@ -207,7 +224,6 @@ const FormBooking = () => {
     </form>    
     </div>
   )
-}
-
+        }
 
 export default FormBooking
