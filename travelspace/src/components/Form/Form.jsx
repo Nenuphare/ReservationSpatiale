@@ -34,16 +34,16 @@ const Form= () => {
             <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Nous contacter</div>
             <h1 class="display-6 mb-5">Si vous avez une question, merci de remplir le formulaire.</h1>
                       <form ref={form} onSubmit={sendEmail}>
-                      <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>       
-                                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
+                      <Grid direction={{ xs: 'column', sm: 'row' }} xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>       
+                                <Box  sx={{ display: 'flex', alignItems: 'flex-end'  }}>
                                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                                     <TextField id="input-with-sx" label="Prenom" variant="standard" name="from_name"/>
                                 </Box>
-                                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
+                                <Box xs sx={{ display: 'flex', alignItems: 'flex-end' }}>
                                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
                                     <TextField id="input-with-sx" label="E-mail" variant="standard" name="from_email"/>
                                 </Box>
-                                <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }}>
+                                <Box xs sx={{ display: 'flex', alignItems: 'flex-end'  }}>
                                     <MailIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }}/>
                                     <TextField id="input-with-sx" label="Message" variant="standard" name="message"/>
                                 </Box>
