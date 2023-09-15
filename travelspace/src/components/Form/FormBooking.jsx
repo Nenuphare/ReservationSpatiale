@@ -74,7 +74,7 @@ useEffect(() =>{
     <div id='reserver'>
       <Typography variant="h3" xs display="flex" justifyContent="center" sx={{ mt: 3 }}>Réserver</Typography>
        <form onSubmit={handleSubmit}>
-       <Grid xs display="flex" justifyContent="center" alignItems="center" sx={{ mt: 3 }}>      
+       <Grid xs direction={{ xs: 'column', sm: 'row' }} display="flex" justifyContent="center" alignItems="center">      
                 <Box sx={{ display: 'flex', alignItems: 'flex-end', ml: 3  }} onChange={handleChange}>
                     <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                     <TextField id="input-with-sx" label="Prenom" variant="standard"  value={formDataReservation.firstname} name="firstname" />
@@ -177,7 +177,7 @@ useEffect(() =>{
             </Grid>
     </Grid>
     </div>
-    <Box xs display="flex" justifyContent="center" sx={{ maxWidth: 170, mt: 5, ml: 88 }} onChange={handleChange}>
+    <Box xs display="flex" justifyContent="center" alignItems="center" onChange={handleChange} sx={{mt: 2}}>
       <FormControl>
         <InputLabel variant="standard" htmlFor="uncontrolled-native">
           Programme
@@ -197,7 +197,7 @@ useEffect(() =>{
         </NativeSelect>
       </FormControl>
     </Box>
-    <Box xs display="flex" justifyContent="center" sx={{ maxWidth: 170, mt: 5, ml: 88 }} onChange={handleChange}>
+    <Box xs display="flex" justifyContent="center" alignItems="center" onChange={handleChange} sx={{mt: 2}}>
       <FormControl>
         <InputLabel variant="standard" htmlFor="uncontrolled-native">
           Date de départ

@@ -2,21 +2,17 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Packs from "./components/Pack/Pack";
 import Page0 from "./components/Footer/cgu";
 import Page1 from "./components/Footer/cgv";
 import Page2 from "./components/Footer/mentions";
 import Form from "./components/Form/Form";
+import Program from "./components/Program/Program";
 import Home from './components/Home/Home';
 import FormBooking from './components/Form/FormBooking';
-import Cookies from "./components/Cookies/Cookie";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 const Layout = () => {
   return (
     <div className='app'>
-      <Cookies />
       <Navbar />
       <Header />
       <Outlet />
@@ -55,13 +51,13 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/components/Pack/Pack",
-        element: <Packs />,
+        path: "/components/Form/FormBooking",
+        element: <FormBooking />,
       },
 
       {
-        path: "/components/Form/FormBooking",
-        element: <FormBooking />,
+        path: "/components/Program/Program",
+        element: <Program />,
       },
     ] 
  },
@@ -70,10 +66,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <div><RouterProvider router={router} /></div>
   );
+
 }
 
 export default App;
