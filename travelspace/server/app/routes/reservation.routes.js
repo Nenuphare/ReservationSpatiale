@@ -9,5 +9,5 @@ module.exports = app => {
     //Find all etape
     router.get("/reservation", reservation.findAll);
 
-    app.use("/api/", router);
+    app.use("/api", router);
 }

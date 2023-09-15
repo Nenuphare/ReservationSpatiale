@@ -4,12 +4,12 @@ module.exports = mongoose => {
       mongoose.Schema(
         {
           _id : String,
-          nom: String,
-          prenom: String,
+          name: String,
+          firstname: String,
           email: String,
           telephone: String,
-          nomDest: String,
-          dateDepart: String,
+          programme: String,
+          date: String
         },
         { timestamps: true }
       )
