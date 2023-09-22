@@ -21,6 +21,8 @@ const Layout = () => {
   );
 };
 
+// lol
+
 const router = createBrowserRouter([
   {
     path: "/",
